@@ -519,6 +519,13 @@ footer a:hover{color:var(--cyan)}
   .pricing-cards{grid-template-columns:1fr}
   .auth-stats{grid-template-columns:1fr}
 }
+/* RESOURCES */
+.res-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:36px}
+.res-card{display:block;text-decoration:none;color:var(--text);background:var(--bg);border:1px solid rgba(0,240,255,.1);border-radius:var(--radius);padding:22px 20px;transition:all .3s}
+.res-card:hover{border-color:var(--cyan);transform:translateY(-2px)}
+.res-card .res-tag{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:2px;text-transform:uppercase;color:var(--cyan);margin-bottom:8px}
+.res-card .res-title{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:1.02rem;color:var(--white);line-height:1.3}
+.res-card:hover .res-title{color:var(--cyan)}
 </style>
 </head>
 <body>
@@ -791,6 +798,24 @@ footer a:hover{color:var(--cyan)}
         <div class="faq-a"><div class="faq-a-inner">Absolutely. Sarah is live on our website right now in the bottom right corner. Talk to her. Or call her directly at 661-299-7299. That's exactly what your customers will experience. No credit card. No obligation. Just proof.</div></div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ==================== RESOURCES ==================== -->
+<section class="section" style="background:var(--bg2)">
+  <div class="container">
+    <div class="section-label">Free Playbook</div>
+    <h2>Learn How to <span class="text-cyan">Stop Missing Calls</span></h2>
+    <p style="color:var(--dim);max-width:600px;margin-top:12px">Real strategy for service businesses in Santa Clarita and Los Angeles County. No fluff, no hype.</p>
+    <div class="res-grid">
+      <a class="res-card" href="/blog/speed-to-lead-first-5-minutes/"><div class="res-tag">Speed to Lead</div><div class="res-title">Why the First 5 Minutes Decide the Job</div></a>
+      <a class="res-card" href="/blog/missed-call-text-back-booked-jobs/"><div class="res-tag">Speed to Lead</div><div class="res-title">Missed-Call Text-Back: Turn Voicemail Into Booked Jobs</div></a>
+      <a class="res-card" href="/blog/ai-receptionist-24-7/"><div class="res-tag">AI Receptionist</div><div class="res-title">The 24/7 AI Receptionist: Never Miss Another Call</div></a>
+      <a class="res-card" href="/blog/ai-voice-agent-pricing/"><div class="res-tag">Pricing</div><div class="res-title">What It Costs vs a Single Missed Call</div></a>
+      <a class="res-card" href="/blog/ai-voice-agent-hvac-santa-clarita/"><div class="res-tag">HVAC</div><div class="res-title">AI Voice Agents for Santa Clarita HVAC Companies</div></a>
+      <a class="res-card" href="/blog/why-scv-businesses-switch-ai-phones/"><div class="res-tag">Santa Clarita</div><div class="res-title">Why SCV Businesses Are Switching to AI Phones</div></a>
+    </div>
+    <div style="text-align:center;margin-top:30px"><a href="/blog/" class="btn btn-outline">Read the Blog &rarr;</a></div>
   </div>
 </section>
 

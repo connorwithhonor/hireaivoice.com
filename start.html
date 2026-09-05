@@ -142,4 +142,13 @@ footer{padding:32px 0;font-size:.86rem;color:var(--soft);text-align:center;line-
   <a href="/">Home</a> &middot; <a href="/how-forwarding-works.html">How it connects</a> &middot; <a href="/blog/">Blog</a>
 </div></footer>
 
+<script>
+(function(){
+  var m = new URLSearchParams(location.search).get('market');
+  if (!m) return;
+  var f = document.getElementById('inline-yyC0LQuNWIW5sM4qaaCf');
+  if (!f) return;
+  f.src = f.src + (f.src.indexOf('?') > -1 ? '&' : '?') + 'market=' + encodeURIComponent(m);
+})();
+</script>
 <script src="https://go.hireaivoice.com/js/form_embed.js"></script>

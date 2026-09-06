@@ -1,0 +1,226 @@
+<title>What Your Missed Calls Cost | HireAIVoice</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Put in your own numbers and see what the calls you miss are costing you every month. Your figures, your math, shown in full. No email required to see the answer.">
+<link rel="canonical" href="https://hireaivoice.com/calculator">
+<meta property="og:title" content="What Your Missed Calls Cost | HireAIVoice">
+<meta property="og:description" content="Put in your own numbers and see what the calls you miss are costing you every month. No email required to see the answer.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hireaivoice.com/calculator">
+<meta property="og:image" content="https://hireaivoice.com/og-image-steampunk.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="What Your Missed Calls Cost | HireAIVoice">
+<meta name="twitter:description" content="Your numbers, your math, shown in full.">
+<meta name="twitter:image" content="https://hireaivoice.com/og-image-steampunk.png">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/favicon-180.png">
+
+<style>
+
+:root{--ink:#12191f;--soft:#4d5a66;--line:#e3e9ef;--bg:#fff;--alt:#f5f8fb;
+--go:#0a7d3c;--go2:#08682f;--accent:#0b5fa5;--warn:#b8860b}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.w{max-width:1060px;margin:0 auto;padding:0 22px}
+h1,h2,h3{line-height:1.15;letter-spacing:-.022em;margin:0 0 .5em}
+h1{font-size:clamp(1.9rem,4.6vw,2.9rem);font-weight:800}
+h2{font-size:1.2rem;font-weight:750}
+h3{font-size:1rem;font-weight:700;margin-bottom:.3em}
+p{margin:0 0 1em}
+a{color:var(--accent)}
+.bar{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;padding:14px 0;font-size:.94rem;border-bottom:1px solid var(--line)}
+.bar strong{font-size:1.05rem}
+.bar a{color:var(--accent);font-weight:750;text-decoration:none}
+.top{background:linear-gradient(180deg,#eff6fb,#fff);padding:44px 0 34px}
+.top .lede{font-size:1.15rem;color:var(--soft);max-width:640px;margin:0}
+.grid{display:grid;grid-template-columns:1.35fr .8fr;gap:40px;align-items:start;padding:44px 0 64px}
+@media(max-width:900px){.grid{grid-template-columns:1fr;gap:32px;padding:30px 0 48px}}
+.formwrap{background:#fff;border:1px solid var(--line);border-radius:16px;padding:10px;box-shadow:0 3px 6px rgba(18,25,31,.05),0 16px 36px rgba(18,25,31,.08)}
+.formwrap iframe{width:100%;min-height:700px;border:none;border-radius:10px;display:block}
+@media(max-width:900px){.formwrap iframe{min-height:900px}}
+.rail{position:sticky;top:22px}
+@media(max-width:900px){.rail{position:static}}
+.card{background:var(--alt);border:1px solid var(--line);border-radius:14px;padding:22px 22px 18px;margin-bottom:18px}
+.card.gold{background:#fffdf5;border-color:#f0e3bd;border-left:4px solid var(--warn)}
+.card p{font-size:.94rem;color:var(--soft);margin:0 0 .8em}
+.card p:last-child{margin-bottom:0}
+.step{position:relative;padding-left:40px;margin-bottom:16px}
+.step:last-child{margin-bottom:0}
+.step .n{position:absolute;left:0;top:-1px;width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:750;font-size:.87rem}
+.step p{font-size:.92rem;color:var(--soft);margin:0}
+.big{font-size:2rem;font-weight:800;letter-spacing:-.03em;line-height:1;color:var(--ink)}
+.per{font-size:.95rem;color:var(--soft);font-weight:400}
+.chk{list-style:none;padding:0;margin:0}
+.chk li{padding:7px 0 7px 26px;position:relative;color:var(--soft);font-size:.93rem}
+.chk li::before{content:"";position:absolute;left:0;top:14px;width:12px;height:6px;border-left:2.5px solid var(--go);border-bottom:2.5px solid var(--go);transform:rotate(-45deg)}
+.x li::before{border:0;transform:none;content:"\2013";top:7px;left:2px;color:#9aa5b1;font-weight:700}
+.callbox{text-align:center;border:2px solid var(--go);background:#fff;border-radius:14px;padding:20px}
+.callbox .kicker{font-size:.75rem;font-weight:750;letter-spacing:.1em;text-transform:uppercase;color:var(--go);margin-bottom:8px}
+.callbox .num{display:block;font-size:1.6rem;font-weight:800;color:var(--go);text-decoration:none;letter-spacing:-.02em}
+.callbox .num:hover{color:var(--go2)}
+.callbox p{font-size:.9rem;color:var(--soft);margin:10px 0 0}
+noscript .nojs{background:#fffdf5;border:1px solid #f0e3bd;border-left:4px solid var(--warn);border-radius:8px;padding:18px 20px;font-size:.95rem;display:block}
+footer{padding:32px 0;font-size:.86rem;color:var(--soft);text-align:center;line-height:1.8;border-top:1px solid var(--line)}
+
+section{padding:52px 0;border-top:1px solid var(--line)}
+.alt{background:var(--alt)}
+.hero{background:linear-gradient(180deg,#eff6fb,#fff);padding:48px 0 34px;border-top:0}
+.btn{display:inline-block;background:var(--go);color:#fff;font-weight:750;font-size:1.05rem;padding:16px 30px;border-radius:10px;text-decoration:none;min-height:48px;border:0}
+.btn:hover{background:var(--go2)}
+.btn-alt{background:#fff;color:var(--accent);border:2px solid var(--accent)}
+.calc{display:grid;grid-template-columns:1fr .95fr;gap:34px;align-items:start}
+@media(max-width:900px){.calc{grid-template-columns:1fr;gap:26px}}
+.panel{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px;box-shadow:0 3px 6px rgba(18,25,31,.05),0 16px 36px rgba(18,25,31,.07)}
+.f{margin-bottom:26px}
+.f:last-child{margin-bottom:0}
+.f label{display:block;font-weight:750;font-size:1rem;margin-bottom:4px}
+.f .hint{font-size:.88rem;color:var(--soft);margin-bottom:12px}
+.row{display:flex;align-items:center;gap:14px}
+.row input[type=range]{flex:1;accent-color:var(--go);height:32px}
+.val{min-width:104px;text-align:right;font-weight:800;font-size:1.22rem;letter-spacing:-.02em}
+.out{background:var(--ink);color:#fff;border-radius:16px;padding:30px;text-align:center}
+.out .lbl{font-size:.78rem;font-weight:750;letter-spacing:.1em;text-transform:uppercase;color:#8fa79a}
+.out .big{font-size:clamp(2.4rem,7vw,3.4rem);font-weight:800;letter-spacing:-.03em;line-height:1.05;color:#6ee7a0;margin:8px 0 2px}
+.out .sub{color:#b6c3ce;font-size:.98rem;margin:0}
+.out hr{border:0;border-top:1px solid #2a3942;margin:22px 0}
+.out .yr{font-size:1.5rem;font-weight:800;color:#fff;letter-spacing:-.02em}
+.math{background:var(--alt);border:1px solid var(--line);border-radius:12px;padding:18px 20px;font-size:.93rem;color:var(--soft);margin-top:20px}
+.math code{background:#fff;border:1px solid var(--line);border-radius:6px;padding:2px 7px;font-size:.9rem;color:var(--ink)}
+.math strong{color:var(--ink)}
+.verdict{margin-top:20px;padding:18px 20px;border-radius:12px;font-size:1rem;border-left:4px solid var(--warn);background:#fffdf5;border:1px solid #f0e3bd;border-left:4px solid var(--warn)}
+.quiet{font-size:.9rem;color:var(--soft)}
+footer{padding:32px 0;font-size:.86rem;color:var(--soft);text-align:center;line-height:1.8;border-top:1px solid var(--line)}
+</style>
+
+<div class="w bar">
+  <strong><a href="/" style="color:var(--ink);text-decoration:none">HireAIVoice</a></strong>
+  <span><a href="/start?market=calculator">Start</a> &nbsp;&middot;&nbsp; <a href="/system">The system</a> &nbsp;&middot;&nbsp; <a href="/nonprofits">Nonprofits</a> &nbsp;&middot;&nbsp; <a href="/blog/">Blog</a></span>
+</div>
+
+<div class="hero"><div class="w">
+  <h1>What are the calls you miss actually costing you?</h1>
+  <p class="lede" style="max-width:660px">Nobody can feel a missed call. That is the whole problem with it. Put your own numbers in and the number stops being invisible. No email needed to see the answer.</p>
+</div></div>
+
+<section style="border-top:0;padding-top:8px"><div class="w calc">
+
+  <div class="panel">
+    <div class="f">
+      <label for="missed">Calls you miss in a typical week</label>
+      <div class="hint">After hours, on a job, on the other line, lunch. Most owners guess low.</div>
+      <div class="row">
+        <input type="range" id="missed" min="1" max="60" value="12" step="1">
+        <div class="val" id="missedV">12</div>
+      </div>
+    </div>
+
+    <div class="f">
+      <label for="job">What an average job is worth to you</label>
+      <div class="hint">One job. Not a year of that customer.</div>
+      <div class="row">
+        <input type="range" id="job" min="75" max="5000" value="450" step="25">
+        <div class="val" id="jobV">$450</div>
+      </div>
+    </div>
+
+    <div class="f">
+      <label for="close">Of the callers you DO reach, how many book?</label>
+      <div class="hint">Be conservative. This is the number that keeps the math sane.</div>
+      <div class="row">
+        <input type="range" id="close" min="5" max="90" value="30" step="1">
+        <div class="val" id="closeV">30%</div>
+      </div>
+    </div>
+
+    <div class="f">
+      <label for="newbiz">How many of those missed calls are new business?</label>
+      <div class="hint">The rest are suppliers, existing customers, wrong numbers.</div>
+      <div class="row">
+        <input type="range" id="newbiz" min="10" max="100" value="60" step="5">
+        <div class="val" id="newbizV">60%</div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="out">
+      <div class="lbl">Walking out the door, every month</div>
+      <div class="big" id="month">$0</div>
+      <p class="sub" id="jobsline">0 jobs a month</p>
+      <hr>
+      <div class="lbl">Over a year</div>
+      <div class="yr" id="year">$0</div>
+    </div>
+
+    <div class="math">
+      <strong>The math, in full.</strong><br>
+      <code id="m1">12</code> missed a week
+      &times; <code>4.33</code> weeks
+      &times; <code id="m2">60%</code> new business
+      &times; <code id="m3">30%</code> book
+      &times; <code id="m4">$450</code> a job.
+      <div style="margin-top:10px">We use 4.33 weeks because that is what a month actually is. Nothing here is inflated, and every number in it is one you typed.</div>
+    </div>
+
+    <div class="verdict" id="verdict"></div>
+
+    <p style="margin-top:24px">
+      <a class="btn" href="/start?market=calculator">Start the 30 days</a> &nbsp;
+      <a class="btn btn-alt" href="tel:+16612197299">Hear it work first</a>
+    </p>
+    <p class="quiet">Thirty days at no cost. At the end you see every call it caught and you decide.</p>
+  </div>
+</div></section>
+
+<section class="alt"><div class="w">
+  <h2>Why this number is usually worse than people guess</h2>
+  <p style="max-width:720px">Two reasons. Most owners count the voicemails they got, not the calls that hung up without leaving one, and most people do not leave one. And a missed call is not a lost call, it is a call that went to whoever answered next. You do not just lose the job. Somebody else books it.</p>
+  <p style="max-width:720px">That is why the leak is invisible. Nothing shows up in your books saying "the phone rang at 7:40pm and you were at dinner." It just quietly does not become revenue.</p>
+</div></section>
+
+<section><div class="w" style="text-align:center">
+  <h2>Now go make it try to sell you.</h2>
+  <p class="lede" style="max-width:620px;margin:0 auto 24px">Call the demo line, tell it what your business does, and ask what something costs. It will not guess and it will not quote you.</p>
+  <a class="btn" href="tel:+16612197299">(661) 219-7299</a>
+</div></section>
+
+<footer><div class="w">
+  HireAIVoice &middot; Connor MacIvor &middot; 27943 Seco Canyon Road #593, Saugus, CA 91350<br>
+  Call or text <a href="tel:+16614762217">(661) 476-2217</a> &middot; Demo line <a href="tel:+16612197299">(661) 219-7299</a><br>
+  <a href="/">Home</a> &middot; <a href="/system">The system</a> &middot; <a href="/start?market=calculator">Start</a>
+</div></footer>
+
+<script>
+(function(){
+  var W=4.33, PRICE=397;
+  var el=function(i){return document.getElementById(i)};
+  var f=['missed','job','close','newbiz'].map(el);
+  var money=function(n){return '$'+Math.round(n).toLocaleString('en-US')};
+  function run(){
+    var m=+f[0].value, j=+f[1].value, c=+f[2].value/100, nb=+f[3].value/100;
+    el('missedV').textContent=m;
+    el('jobV').textContent=money(j);
+    el('closeV').textContent=Math.round(c*100)+'%';
+    el('newbizV').textContent=Math.round(nb*100)+'%';
+    var jobs=m*W*nb*c, lost=jobs*j;
+    el('month').textContent=money(lost);
+    el('jobsline').textContent=(jobs<1?jobs.toFixed(1):Math.round(jobs))+' job'+(Math.round(jobs)===1?'':'s')+' a month';
+    el('year').textContent=money(lost*12);
+    el('m1').textContent=m; el('m2').textContent=Math.round(nb*100)+'%';
+    el('m3').textContent=Math.round(c*100)+'%'; el('m4').textContent=money(j);
+    var v=el('verdict');
+    if(lost<PRICE){
+      v.innerHTML='<strong>Be straight with yourself on these numbers.</strong> At what you have entered, the leak is smaller than the fix. If that is genuinely your business, you do not need us yet, and I am not going to pretend otherwise. Call the demo line anyway and see what it does.';
+    } else {
+      var x=lost/PRICE;
+      var need=PRICE/(+f[1].value);
+      var needTxt = need<1 ? 'less than one job a month' : (need<1.5?'about one job a month':'about '+Math.round(need)+' jobs a month');
+      v.innerHTML='<strong>That is '+(x>=10?Math.round(x):x.toFixed(1))+' times what NightDesk costs.</strong> The founding rate is $397 a month and the first thirty days are free. Recovering '+needTxt+' pays for it.';
+    }
+  }
+  f.forEach(function(x){x.addEventListener('input',run)});
+  run();
+})();
+</script>

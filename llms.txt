@@ -41,9 +41,17 @@ Calendar.
 
 Two plans, both flat, with no setup fee and no contracts.
 
-- Starter, $397 per month. The core agent: answers every call, books the appointment, follows up.
-- Full System, $597 per month. Everything in Starter plus a built-in CRM, automated nurture
-  sequences, lead scoring, and review automation.
+Both plans include the whole platform at no extra charge: a CRM with unlimited contacts,
+unlimited user logins for the client's entire team, online booking synced to their calendar,
+automated review requests, a social media planner, forms, pipelines, contracts with e-signature,
+and invoicing.
+
+- Starter, $397 per month. The AI voice agent answers every call, books the appointment and
+  follows up, and the client has access to the full platform to use as they wish.
+- Full System, $597 per month. Connor builds and runs the platform for them: the pipeline, the
+  nurture sequences, review monitoring, social scheduling, and listings management that keeps
+  their name, address and phone consistent across the directories. The difference between the two
+  plans is labor, not more software.
 
 The first ten businesses get Starter at $397 with the first 30 days free, on the after-hours
 line only, and that rate locked for as long as they stay. Forwarding can be switched off by the business owner at any time without contacting

@@ -226,7 +226,7 @@ footer{padding:32px 0;font-size:.86rem;color:var(--soft);text-align:center;line-
       var x=lost/PRICE;
       var need=PRICE/(+f[1].value);
       var needTxt = need<1 ? 'less than one job a month' : (need<1.5?'about one job a month':'about '+Math.round(need)+' jobs a month');
-      v.innerHTML='<strong>That is '+(x>=10?Math.round(x):x.toFixed(1))+' times what NightDesk costs.</strong> The founding rate is $397 a month and the first thirty days are free. Recovering '+needTxt+' pays for it.';
+      v.innerHTML='<strong>That is '+(x>=10?Math.round(x):x.toFixed(1))+' times what HireAIVoice costs.</strong> The founding rate is $397 a month and the first thirty days are free. Recovering '+needTxt+' pays for it.';
     }
   }
   f.forEach(function(x){x.addEventListener('input',run)});
@@ -234,7 +234,7 @@ footer{padding:32px 0;font-size:.86rem;color:var(--soft);text-align:center;line-
 })();
 </script>
 <div class="callbar"><div class="in">
-  <a class="c" href="tel:+16612197299">Call Betty<br>(661) 219-7299</a>
+  <a class="c" href="tel:+16612197299">Call Vera<br>(661) 219-7299</a>
   <a class="s" href="/start?market=stickybar">Start the<br>30 days free</a>
 </div></div>
 <script src="/enhance.js" defer></script>

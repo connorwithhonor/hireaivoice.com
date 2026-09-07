@@ -11,7 +11,7 @@ HireAIVoice installs an AI voice agent on a business's existing phone line. The 
 its own number and its own carrier. The line forwards to the agent only when nobody answers or
 the line is busy, so the agent never intercepts a call a human was going to pick up.
 
-The demo agent is named Betty. Any deployed agent is named by the business owner.
+The demo agent is named Vera. Any deployed agent is named by the business owner.
 
 ## How to try it
 
@@ -39,8 +39,14 @@ Calendar.
 
 ## Pricing
 
-$397 per month for the founding ten businesses. The first 30 days are free, on the after-hours
-line only. Forwarding can be switched off by the business owner at any time without contacting
+Two plans, both flat, with no setup fee and no contracts.
+
+- Starter, $397 per month. The core agent: answers every call, books the appointment, follows up.
+- Full System, $597 per month. Everything in Starter plus a built-in CRM, automated nurture
+  sequences, lead scoring, and review automation.
+
+The first ten businesses get Starter at $397 with the first 30 days free, on the after-hours
+line only, and that rate locked for as long as they stay. Forwarding can be switched off by the business owner at any time without contacting
 anyone.
 
 ## Coverage

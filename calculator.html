@@ -2,20 +2,20 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>What Your Missed Calls Cost | HireAIVoice</title>
+<title>Missed-Call Opportunity Calculator | HireAIVoice</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Put in your own numbers and see what the calls you miss are costing you every month. Your figures, your math, shown in full. No email required to see the answer.">
+<meta name="description" content="Estimate the opportunity behind missed calls using your own inputs. Results are not guaranteed, and no email is required.">
 <link rel="canonical" href="https://hireaivoice.com/calculator">
-<meta property="og:title" content="What Your Missed Calls Cost | HireAIVoice">
-<meta property="og:description" content="Put in your own numbers and see what the calls you miss are costing you every month. No email required to see the answer.">
+<meta property="og:title" content="Missed-Call Opportunity Calculator | HireAIVoice">
+<meta property="og:description" content="Estimate the opportunity behind missed calls using your own inputs. No email required.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://hireaivoice.com/calculator">
 <meta property="og:image" content="https://hireaivoice.com/og-cover.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="What Your Missed Calls Cost | HireAIVoice">
-<meta name="twitter:description" content="Your numbers, your math, shown in full.">
+<meta name="twitter:title" content="Missed-Call Opportunity Calculator | HireAIVoice">
+<meta name="twitter:description" content="Estimate missed-call opportunity using your own inputs.">
 <meta name="twitter:image" content="https://hireaivoice.com/og-cover.jpg">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -97,7 +97,7 @@ section{padding:52px 0;border-top:1px solid var(--line)}
 .quiet{font-size:.9rem;color:var(--soft)}
 footer{padding:32px 0;font-size:.86rem;color:var(--soft);text-align:center;line-height:1.8;border-top:1px solid var(--line)}
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "@id": "https://hireaivoice.com/calculator#page", "url": "https://hireaivoice.com/calculator", "name": "Missed call cost calculator", "description": "Work out what missed calls cost your business. Your numbers, the full formula, no email required.", "isPartOf": {"@type": "WebSite", "@id": "https://hireaivoice.com/#site"}, "about": {"@type": "Service", "@id": "https://hireaivoice.com/#service"}, "publisher": {"@type": "Organization", "@id": "https://hireaivoice.com/#org", "name": "HireAIVoice", "telephone": "+1-661-476-2217", "url": "https://hireaivoice.com/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "@id": "https://hireaivoice.com/calculator#page", "url": "https://hireaivoice.com/calculator", "name": "Missed call opportunity calculator", "description": "Estimate the opportunity behind missed calls using your own inputs. The result is not guaranteed revenue, and no email is required.", "isPartOf": {"@type": "WebSite", "@id": "https://hireaivoice.com/#site"}, "about": {"@type": "Service", "@id": "https://hireaivoice.com/#service"}, "publisher": {"@type": "Organization", "@id": "https://hireaivoice.com/#org", "name": "HireAIVoice", "telephone": "+1-661-476-2217", "url": "https://hireaivoice.com/"}}</script>
 <link rel="stylesheet" href="/enhance.css">
 </head>
 <body>
@@ -109,7 +109,7 @@ footer{padding:32px 0;font-size:.86rem;color:var(--soft);text-align:center;line-
 
 <div class="hero"><div class="w">
   <h1>What are the calls you miss actually costing you?</h1>
-  <p class="lede" style="max-width:660px">Nobody can feel a missed call. That is the whole problem with it. Put your own numbers in and the number stops being invisible. No email needed to see the answer.</p>
+  <p class="lede" style="max-width:660px">Use your own call count, contact rate, booking rate, and job value. The result is an estimate, not guaranteed revenue. No email is required.</p>
 </div></div>
 
 <section style="border-top:0;padding-top:8px"><div class="w calc">
@@ -117,7 +117,7 @@ footer{padding:32px 0;font-size:.86rem;color:var(--soft);text-align:center;line-
   <div class="panel">
     <div class="f">
       <label for="missed">Calls you miss in a typical week</label>
-      <div class="hint">After hours, on a job, on the other line, lunch. Most owners guess low.</div>
+      <div class="hint">Use the missed-call count from your own phone records.</div>
       <div class="row">
         <input type="range" id="missed" min="1" max="60" value="12" step="1">
         <div class="val" id="missedV">12</div>
@@ -154,11 +154,11 @@ footer{padding:32px 0;font-size:.86rem;color:var(--soft);text-align:center;line-
 
   <div>
     <div class="out">
-      <div class="lbl">Walking out the door, every month</div>
+      <div class="lbl">Estimated monthly opportunity</div>
       <div class="big" id="month">$0</div>
       <p class="sub" id="jobsline">0 jobs a month</p>
       <hr>
-      <div class="lbl">Over a year</div>
+      <div class="lbl">Estimated annual opportunity</div>
       <div class="yr" id="year">$0</div>
     </div>
 
@@ -169,7 +169,7 @@ footer{padding:32px 0;font-size:.86rem;color:var(--soft);text-align:center;line-
       &times; <code id="m2">60%</code> new business
       &times; <code id="m3">30%</code> book
       &times; <code id="m4">$450</code> a job.
-      <div style="margin-top:10px">We use 4.33 weeks because that is what a month actually is. Nothing here is inflated, and every number in it is one you typed.</div>
+      <div style="margin-top:10px">We use 4.33 weeks per month. Every business input comes from you. The result is an estimate, not guaranteed revenue.</div>
     </div>
 
     <div class="verdict" id="verdict"></div>
@@ -178,14 +178,13 @@ footer{padding:32px 0;font-size:.86rem;color:var(--soft);text-align:center;line-
       <a class="btn" href="/start?market=calculator">Start the 30 days</a> &nbsp;
       <a class="btn btn-alt" href="tel:+16612197299">Hear it work first</a>
     </p>
-    <p class="quiet">Thirty days at no cost. At the end you see every call it caught and you decide.</p>
+    <p class="quiet">Starter is $397 a month. Full System is $597 a month. The first 30 days are free on both plans. The founding ten pay no setup fee. Starting with client 11, setup is $497 one time.</p>
   </div>
 </div></section>
 
 <section class="alt"><div class="w">
-  <h2>Why this number is usually worse than people guess</h2>
-  <p style="max-width:720px">Two reasons. Most owners count the voicemails they got, not the calls that hung up without leaving one, and most people do not leave one. And a missed call is not a lost call, it is a call that went to whoever answered next. You do not just lose the job. Somebody else books it.</p>
-  <p style="max-width:720px">That is why the leak is invisible. Nothing shows up in your books saying "the phone rang at 7:40pm and you were at dinner." It just quietly does not become revenue.</p>
+  <h2>Use the estimate as a starting point</h2>
+  <p style="max-width:720px">A missed call is not automatically a lost job. Compare the estimate with your call log, returned calls, and completed work. Update the inputs when you have better data.</p>
 </div></section>
 
 <section><div class="w" style="text-align:center">
@@ -221,12 +220,12 @@ footer{padding:32px 0;font-size:.86rem;color:var(--soft);text-align:center;line-
     el('m3').textContent=Math.round(c*100)+'%'; el('m4').textContent=money(j);
     var v=el('verdict');
     if(lost<PRICE){
-      v.innerHTML='<strong>Be straight with yourself on these numbers.</strong> At what you have entered, the leak is smaller than the fix. If that is genuinely your business, you do not need us yet, and I am not going to pretend otherwise. Call the demo line anyway and see what it does.';
+      v.innerHTML='<strong>Use the numbers you entered.</strong> At these inputs, the estimated opportunity is smaller than the Starter price. You may not need this service yet. Call the demo line if you want to test it.';
     } else {
       var x=lost/PRICE;
       var need=PRICE/(+f[1].value);
       var needTxt = need<1 ? 'less than one job a month' : (need<1.5?'about one job a month':'about '+Math.round(need)+' jobs a month');
-      v.innerHTML='<strong>That is '+(x>=10?Math.round(x):x.toFixed(1))+' times what HireAIVoice costs.</strong> The founding rate is $397 a month and the first thirty days are free. Recovering '+needTxt+' pays for it.';
+      v.innerHTML='<strong>The estimate is '+(x>=10?Math.round(x):x.toFixed(1))+' times the Starter price.</strong> Starter is $397 a month. If the jobs and values you entered convert as estimated, '+needTxt+' would cover that monthly price. Results are not guaranteed.';
     }
   }
   f.forEach(function(x){x.addEventListener('input',run)});

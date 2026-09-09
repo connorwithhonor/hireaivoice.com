@@ -1,8 +1,9 @@
 # HireAIVoice
 
 > An AI phone agent that answers a local business's calls when nobody there can: after hours,
-> weekends, holidays, at lunch, and when the line is already busy. It takes the details, books
-> the appointment, and texts the front desk. Built and run by one person, Connor MacIvor, in
+> weekends, holidays, at lunch, and when the line is already busy. It takes the details and
+> offers available times. With Google Calendar it can book directly. Otherwise it captures the
+> caller's preference and texts the front desk. Built and run by one person, Connor MacIvor, in
 > Santa Clarita, California.
 
 ## What it is
@@ -39,23 +40,27 @@ Calendar.
 
 ## Pricing
 
-Two plans, both flat, with no setup fee and no contracts.
+Starter is $397 per month. Full System is $597 per month. The first 30 days are free on both
+plans. The founding ten pay no setup fee. Starting with client 11, setup is $497 one time.
+There are no contracts. Both plans are month to month.
 
 Both plans include the whole platform at no extra charge: a CRM with unlimited contacts,
 unlimited user logins for the client's entire team, online booking synced to their calendar,
 automated review requests, a social media planner, forms, pipelines, contracts with e-signature,
 and invoicing.
 
-- Starter, $397 per month. The AI voice agent answers every call, books the appointment and
-  follows up, and the client has access to the full platform to use as they wish.
+- Starter, $397 per month. The AI voice agent answers calls the team misses after hours, on
+  closed days, and when the line is busy. The team gets first shot at the phone. With Google
+  Calendar it can book directly. Otherwise it captures the caller's preferred time and texts
+  the desk. The client has access to the full platform to use as they wish.
 - Full System, $597 per month. Connor builds and runs the platform for them: the pipeline, the
   nurture sequences, review monitoring, social scheduling, and listings management that keeps
   their name, address and phone consistent across the directories. The difference between the two
   plans is labor, not more software.
 
-The first ten businesses get Starter at $397 with the first 30 days free, on the after-hours
-line only, and that rate locked for as long as they stay. Forwarding can be switched off by the business owner at any time without contacting
-anyone.
+The first 30 days are free on both plans, on the after-hours line only. The founding ten pay no
+setup fee. Starting with client 11, setup is $497 one time. Forwarding can be switched off by
+the business owner at any time without contacting anyone.
 
 ## Coverage
 

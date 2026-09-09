@@ -1,93 +1,25 @@
-# HireAIVoice
+# HireAIVoice by HonorElevate
 
-> An AI phone agent that answers a local business's calls when nobody there can: after hours,
-> weekends, holidays, at lunch, and when the line is already busy. It takes the details and
-> offers available times. With Google Calendar it can book directly. Otherwise it captures the
-> caller's preference and texts the front desk. Built and run by one person, Connor MacIvor, in
-> Santa Clarita, California.
-
-## What it is
-
-HireAIVoice installs an AI voice agent on a business's existing phone line. The business keeps
-its own number and its own carrier. The line forwards to the agent only when nobody answers or
-the line is busy, so the agent never intercepts a call a human was going to pick up.
-
-The demo agent is named Vera. Any deployed agent is named by the business owner.
-
-## How to try it
-
-Call the live demo at (661) 219-7299 from anywhere. Tell it what your business does and it will
-act as your receptionist for two minutes so you can hear how it handles your calls.
-
-## Hard rules the agent operates under
-
-- It states that it is an AI in its first sentence of every call. This is deliberate, not a
-  disclaimer buried at the end.
-- Call recording is off by default. California requires all-party consent, so the requirement
-  was removed rather than managed.
-- It quotes no price that the business owner has not approved in writing. It does not guess.
-- It gives no medical, legal, or professional advice. Those questions get routed to a human.
-- Anything outside its rules is escalated to a person rather than improvised.
-
-## What it does not do
-
-It is not a replacement for staff. It answers the calls that were going to voicemail. The free
-trial runs on the after-hours line only, so it cannot take a call from someone who is working.
-
-It does not write into practice management systems like Dentrix on day one. It captures the
-appointment and texts the front desk within a minute, and it can book directly into Google
-Calendar.
-
-## Pricing
-
-Starter is $397 per month. Full System is $597 per month. The first 30 days are free on both
-plans. The founding ten pay no setup fee. Starting with client 11, setup is $497 one time.
-There are no contracts. Both plans are month to month.
-
-Both plans include the whole platform at no extra charge: a CRM with unlimited contacts,
-unlimited user logins for the client's entire team, online booking synced to their calendar,
-automated review requests, a social media planner, forms, pipelines, contracts with e-signature,
-and invoicing.
-
-- Starter, $397 per month. The AI voice agent answers calls the team misses after hours, on
-  closed days, and when the line is busy. The team gets first shot at the phone. With Google
-  Calendar it can book directly. Otherwise it captures the caller's preferred time and texts
-  the desk. The client has access to the full platform to use as they wish.
-- Full System, $597 per month. Connor builds and runs the platform for them: the pipeline, the
-  nurture sequences, review monitoring, social scheduling, and listings management that keeps
-  their name, address and phone consistent across the directories. The difference between the two
-  plans is labor, not more software.
-
-The first 30 days are free on both plans, on the after-hours line only. The founding ten pay no
-setup fee. Starting with client 11, setup is $497 one time. Forwarding can be switched off by
-the business owner at any time without contacting anyone.
-
-## Coverage
-
-Santa Clarita and the 661 area code, Nevada via 775-AIVOICE, and Northern California via
-530-AIVOICE. The system works on any phone line in the United States regardless of area code.
-
-## Who runs it
-
-Connor MacIvor. Twenty years with the Los Angeles Police Department before this. Licensed
-California real estate professional since 1998, writing software since 1983. Clients get a
-direct number to him, not a support portal.
+HireAIVoice is Connor MacIvor's entry service for AI phone support. HonorElevate is the platform and managed-service expansion path. Based in Santa Clarita; serves suitable businesses in Los Angeles County and elsewhere.
 
 ## Contact
+AI voice demo: (661) 219-7299. Connor's AI business line: (661) 476-2217.
 
-- Demo agent: (661) 219-7299
-- Connor directly: (661) 476-2217
-- Mail: 27943 Seco Canyon Road #593, Saugus, CA 91350
+## Scope
+Start with agreed after-hours or overflow coverage, approved business information, request capture, and a defined human handoff. Carrier forwarding must be verified. An appointment request is not a confirmed booking. Direct booking requires a supported connected calendar and acceptance testing. AI can make mistakes. This is not an emergency service or professional advice service.
+
+AI identification is a product standard. Audio recording, transcription, AI processing, summaries, consent, and retention require separate configuration and review. Disabling audio recording does not establish that no personal data is processed.
+
+## Commercial terms
+Published plans: Starter $397/month; Full System $597/month. Published trial: 30 days free. Neither plan has a setup fee. Custom expansion is scoped separately. Availability, actual scope, usage, overages, support, renewal, cancellation, and data handling must be confirmed in writing before activation. Existing accepted customer agreements govern existing service. Turning off forwarding does not itself cancel billing.
+
+Platform access is different from implementation. Larger builds, migrations, campaigns, content production, and custom integrations need separate scope and pricing. No revenue result or unlimited labor is promised.
 
 ## Pages
-
-- Home: https://hireaivoice.com/
-- Start a pilot: https://hireaivoice.com/start
-- What missed calls cost you (calculator): https://hireaivoice.com/calculator
-- The seven-step system: https://hireaivoice.com/system
-- For nonprofits: https://hireaivoice.com/nonprofits
-- How call forwarding works: https://hireaivoice.com/how-forwarding-works
-- Santa Clarita / 661: https://hireaivoice.com/661
-- Nevada / 775: https://hireaivoice.com/nevada
-- Northern California / 530: https://hireaivoice.com/northern-california
-- Articles: https://hireaivoice.com/blog/
+- https://hireaivoice.com/
+- https://hireaivoice.com/system
+- https://hireaivoice.com/start
+- https://hireaivoice.com/calculator
+- https://hireaivoice.com/beyond-the-phone
+- https://hireaivoice.com/how-forwarding-works
+- https://hireaivoice.com/blog/

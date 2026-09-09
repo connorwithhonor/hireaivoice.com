@@ -1,7 +1,6 @@
 /* HireAIVoice enhancement layer. Every effect is additive: if this file never runs,
    the page is fully readable and every link works. */
 (function () {
-  var BETTY_AGENT_ID = "";           // <- paste the ElevenLabs agent id here
   var DEMO = "+16612197299";
   var d = document, root = d.documentElement;
   root.className += " js";
@@ -61,9 +60,7 @@
     [].forEach.call(d.querySelectorAll(".chart"), function (c) { drawCharts(c); });
   });
 
-  /* The floating voice widget is the live HonorElevate one, loaded by its own
-     script tag. No launcher is built here on purpose, so there is never a second
-     floating button competing with it. */
+  /* Voice demos use the telephone links. No browser voice widget is loaded. */
   function init(){}
 
 })();

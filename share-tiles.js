@@ -8,7 +8,11 @@
   var DEMO = '(661) 219-7299';
   var URL_SHOW = 'hireaivoice.com';
   var URL_FULL = 'https://hireaivoice.com';
-  var CTA = 'Call the demo: ' + DEMO;
+  var ASK = 'Want one built for your business?';
+  var CTA = 'Call the demo ' + DEMO;
+  var BUILT = 'Built by Connor MacIvor';
+  var CRED = ['20 years with LAPD', '28 years running a Santa Clarita business', 'builds AI phone systems'];
+  var PORTRAIT_SRC = '/connor-portrait.jpg';
 
   var C = {
     bg: '#f5f5ed', white: '#ffffff', ink: '#122921', muted: '#52645c',
@@ -27,7 +31,7 @@
   var SECONDS = 6, FPS = 30;
   var ANSWER_AT = 2.4; // the phone stops ringing and the AI picks up
 
-  var CLOSE = '\n\n' + CTA + '\n' + URL_FULL;
+  var CLOSE = '\n\nBuilt by Connor MacIvor. 20 years with LAPD, 28 years running a Santa Clarita business, and now building AI phone systems.\n\n' + ASK + ' ' + CTA + '\n' + URL_FULL;
 
   var TILES = [
     { id: 'under-the-sink', kicker: 'Plumbers', emoji: '🔧',
@@ -44,10 +48,11 @@
       head: 'Voicemail is a hallway to somebody else’s phone.',
       sub: 'A caller who hits voicemail may leave a message. Or call the next company on the list. Give them an answer instead.',
       caption: 'Voicemail is a hallway. At the end of it is your competitor’s phone.\n\nA caller who hits your voicemail may leave a message, call back later, or call the next business on the list. HireAIVoice gives them a real answer: a conversation, a captured request, and a clear next step.' + CLOSE + '\n\n#smallbusiness #missedcalls #customerservice' },
-    { id: 'last-voicemail', kicker: 'Quick question', emoji: '📵',
-      head: 'When’s the last time you left a voicemail?',
-      sub: 'Your customers are the same. So the AI picks up, talks it through and captures the request while it’s hot.',
-      caption: 'Think about the last time you left a voicemail for a business.\n\nYeah. Your customers are the same way.\n\nHireAIVoice picks up the after-hours and overflow calls your team misses, talks it through like a person would, and captures the request while the customer still wants it.' + CLOSE + '\n\n#smallbusiness #voicemail #missedcalls' },
+    { id: 'step-one', kicker: 'The whole system', emoji: '🧩',
+      head: 'An answered call is step one.',
+      sub: 'Once the phone is covered, the next bottleneck is follow-up, booking, reviews and getting paid. Built around the way your team works.',
+      quote: 'We’ll decide where AI helps, where a person belongs, and what to measure.',
+      caption: 'Answering the phone is step one. It is not the whole job.\n\nOnce the phone is covered, the next bottleneck shows up: follow-up, booking, reviews, getting paid. HireAIVoice opens the door, and HonorElevate connects what comes next, built around the way your team already works.\n\nOne builder. One system. Measured on what actually happened.' + CLOSE + '\n\n#smallbusiness #automation #ai #operations' },
     { id: 'six-twelve-pitch', kicker: 'Roofers', emoji: '🏠',
       head: 'You’re on a 6/12 pitch. Don’t answer that.',
       sub: 'Stay on the roof. The AI answers the overflow call, gets the address and the leak details, and hands your team a clear next step.',
@@ -84,10 +89,12 @@
     { id: 'try-to-break-it', kicker: 'The demo', emoji: '📞',
       head: 'Try to break it.',
       sub: 'Call the demo. Tell it what your business does. Ask about a service, a price, an appointment. Ask for a person.',
+      quote: 'Show me where the calls go today.',
       caption: 'Don’t take our word for it. Try to break it.\n\nCall the HireAIVoice demo. Tell it what your business does. Ask about a service, a price, or an appointment. Ask for a person and listen to the next step.\n\nHear it before you buy it.' + CLOSE + '\n\n#ai #smallbusiness #demo' },
     { id: 'front-door', kicker: 'What comes next', emoji: '🗝️',
       head: 'The phone is the front door.',
-      sub: 'Once the phone is covered, we fix the next bottleneck: follow-up, reviews, getting paid.',
+      sub: 'Once the phone is covered, the next bottleneck is follow-up, booking, reviews, getting paid. Connor builds what comes next.',
+      quote: 'I build HireAIVoice and HonorElevate to help owners handle the work around the work.',
       caption: 'HireAIVoice fixes one problem very well: the missed call. It answers, holds a real conversation, captures the job and books it.\n\nAnd it opens a door. Once the phone is covered, we work on the next bottleneck: follow-up, reviews, getting paid, keeping customers. That is the HonorElevate path.' + CLOSE + '\n\n#smallbusiness #automation #ai' },
     { id: 'keep-your-number', kicker: 'Setup', emoji: '☎️',
       head: 'Keep your number. Your team still answers first.',
@@ -96,11 +103,30 @@
     { id: 'next-job', kicker: 'Missed calls', emoji: '🧰',
       head: 'That missed call might have been your next job.',
       sub: 'HireAIVoice answers it, holds a real conversation, captures the request, books it and follows up.',
+      quote: 'Bring me the process that keeps breaking.',
       chat: [['Caller', 'Hey, are you taking new customers this month?'], ['AI', 'I’m an AI assistant for the team. Yes, let’s get you on the calendar.']],
       caption: 'That missed call might have been a new job. Or a repeat customer. You won’t know if nobody picks up.\n\nHireAIVoice answers it, holds a real conversation, captures the request, books it to your calendar and follows up. Starter is $397/month.' + CLOSE + '\n\n#smallbusiness #contractor #missedcalls' }
   ];
 
-  /* ---------- easing and helpers ---------- */
+
+  /* ---------- palette: navy base, gold authority, orange action ----------
+     Contrast (WCAG): white on navy 17.48, gold on navy 9.24, body #C5D0DE on
+     navy 11.20, #DCE4EE on band 11.29, navy text on orange 5.25, orange
+     button against navy 5.25. Checked in the QA run. */
+  var C = {
+    navy: '#0B1A2E', navy2: '#102440', band: '#132A47', white: '#FFFFFF',
+    body: '#C5D0DE', soft: '#DCE4EE', label: '#B8C4D4',
+    gold: '#E9B44C', orange: '#F25C05', live: '#2FBF71', phone: '#1D3557'
+  };
+
+  var portrait = null;
+  var ready = new Promise(function (resolve) {
+    var img = new Image();
+    img.onload = function () { portrait = img; resolve(img); };
+    img.onerror = function () { resolve(null); };
+    img.src = PORTRAIT_SRC;
+  });
+
   function clamp(x) { return x < 0 ? 0 : x > 1 ? 1 : x; }
   function easeOut(x) { x = clamp(x); return 1 - Math.pow(1 - x, 3); }
   function prog(t, start, dur) { return easeOut((t - start) / dur); }
@@ -114,8 +140,8 @@
     ctx.arcTo(x, y, x + w, y, r);
     ctx.closePath();
   }
-
-  function font(size, weight) { return (weight || 800) + ' ' + Math.round(size) + 'px ' + SANS; }
+  function font(size, weight, italic) { return (italic ? 'italic ' : '') + (weight || 800) + ' ' + Math.round(size) + 'px ' + SANS; }
+  function spacing(ctx, px) { if (ctx.letterSpacing !== undefined) ctx.letterSpacing = px + 'px'; }
 
   function wrap(ctx, text, maxW) {
     var words = text.split(/\s+/), lines = [], cur = '';
@@ -127,196 +153,220 @@
     if (cur) lines.push(cur);
     return lines;
   }
-
-  // Largest size between max and min whose wrapped block fits maxW x maxH.
-  function fit(ctx, text, maxW, maxH, maxSize, minSize, weight, lh) {
+  function fit(ctx, text, maxW, maxH, maxSize, minSize, weight, lh, italic) {
     for (var s = maxSize; s >= minSize; s -= 2) {
-      ctx.font = font(s, weight);
-      var lines = wrap(ctx, text, maxW);
-      var widest = 0;
+      ctx.font = font(s, weight, italic);
+      var lines = wrap(ctx, text, maxW), widest = 0;
       lines.forEach(function (l) { widest = Math.max(widest, ctx.measureText(l).width); });
-      if (lines.length * s * lh <= maxH && widest <= maxW) return { size: s, lines: lines, lh: lh, weight: weight, h: lines.length * s * lh };
+      if (lines.length * s * lh <= maxH && widest <= maxW) return { size: s, lines: lines, lh: lh, weight: weight, italic: italic, h: lines.length * s * lh };
     }
-    ctx.font = font(minSize, weight);
+    ctx.font = font(minSize, weight, italic);
     var l2 = wrap(ctx, text, maxW);
-    return { size: minSize, lines: l2, lh: lh, weight: weight, h: l2.length * minSize * lh };
+    return { size: minSize, lines: l2, lh: lh, weight: weight, italic: italic, h: l2.length * minSize * lh };
+  }
+  // credibility items stay whole; lines break between items only
+  function credLines(ctx, size, maxW) {
+    ctx.font = font(size, 650);
+    var lines = [], cur = '';
+    CRED.forEach(function (item) {
+      var test = cur ? cur + '  ·  ' + item : item;
+      if (ctx.measureText(test).width > maxW && cur) { lines.push(cur); cur = item; } else cur = test;
+    });
+    if (cur) lines.push(cur);
+    return lines;
   }
 
-  /* ---------- layout (computed once per tile and format) ---------- */
+  /* ---------- layout ---------- */
+  function textBlock(ctx, tile, x, top, bottom, w, hd, sb) {
+    var room = bottom - top - (tile.quoteBy ? hd.quoteGap : 0) - hd.gap;
+    var head = fit(ctx, tile.head, w, room * 0.62, hd.max, hd.min, 800, 1.08);
+    var sub = fit(ctx, tile.sub, w, room - head.h, sb.max, sb.min, 500, 1.38);
+    var total = head.h + hd.gap + (tile.quoteBy ? hd.quoteGap : 0) + sub.h;
+    var y = top + Math.max(0, Math.round((bottom - top - total) / 2));
+    head.x = x; head.y = y; y += head.h + hd.gap * 0.6;
+    var quote = null;
+    if (tile.quoteBy) { quote = { x: x, y: y + hd.quoteGap * 0.55, size: Math.round(sb.max * 0.8) }; y += hd.quoteGap; }
+    sub.x = x; sub.y = y + hd.gap * 0.4;
+    return { head: head, sub: sub, quote: quote };
+  }
+
   function layout(ctx, tile, fmt) {
-    var W = fmt.w, H = fmt.h, L = { W: W, H: H };
+    var W = fmt.w, H = fmt.h, L = { W: W, H: H }, tb;
     if (fmt === FORMATS.story) {
-      var pad = 90, tw = W - pad * 2;
-      L.pad = pad; L.brand = { x: pad, y: 120, size: 50 };
-      L.phone = { cx: W / 2, cy: 440, size: 250 };
-      L.cta = { x: pad, y: 1640, w: tw, h: 124, size: 46 };
-      L.url = { x: W / 2, y: 1836, size: 40, align: 'center' };
-      var top = 790, bottom = L.cta.y - 60;
-      var plan = function (withChat) {
-        var chatH = 0, ch = null;
-        if (withChat) { ch = chatLayout(ctx, tile.chat, pad, 0, tw, 30); chatH = ch.bottom + 40; }
-        var quoteH = tile.quoteBy ? 64 : 0;
-        var room = bottom - top - 54 - quoteH - chatH - 34;
-        var head = fit(ctx, tile.head, tw, room * 0.62, 100, 58, 800, 1.1);
-        var sub = fit(ctx, tile.sub, tw, room - head.h, 42, 30, 500, 1.35);
-        var total = 54 + head.h + 28 + quoteH + sub.h + chatH;
-        return { ch: ch, head: head, sub: sub, quoteH: quoteH, total: total, ok: total <= bottom - top };
-      };
-      var pl = tile.chat ? plan(true) : null;
-      if (!pl || !pl.ok || pl.head.size < 72) pl = plan(false);
-      // center the text block between the phone and the call to action
-      var y0 = top + Math.max(0, Math.round((bottom - top - pl.total) / 2));
-      L.kicker = { x: pad, y: y0 + 30, size: 34 };
-      L.head = pl.head; L.head.x = pad; L.head.y = y0 + 54;
-      var y = L.head.y + L.head.h + 28;
-      if (pl.quoteH) { L.quote = { x: pad, y: y + 30, size: 32 }; y += pl.quoteH; }
-      L.sub = pl.sub; L.sub.x = pad; L.sub.y = y;
-      y = L.sub.y + L.sub.h + 34;
-      if (pl.ch) L.chat = chatLayout(ctx, tile.chat, pad, y, tw, 30);
+      var pad = 80, tw = W - pad * 2;
+      L.pad = pad; L.brand = { x: pad, y: 124, size: 50 };
+      L.cred = { y: 1468, h: 132, size: 30, w: tw };
+      L.ask = { x: W / 2, y: 1672, size: 40, align: 'center' };
+      L.cta = { x: pad, y: 1700, w: tw, h: 116, size: 46 };
+      L.url = { x: W / 2, y: 1874, size: 38, align: 'center' };
+      if (tile.quote) {
+        L.expert = true;
+        L.portrait = { cx: W / 2, cy: 455, d: 330 };
+        L.built = { x: W / 2, y: 700, size: 46, align: 'center' };
+        L.quote = fit(ctx, '“' + tile.quote + '”', 860, 160, 44, 30, 600, 1.3, true);
+        L.quote.x = W / 2; L.quote.y = 738; L.quote.align = 'center';
+        var qEnd = L.quote.y + L.quote.h;
+        L.kicker = { x: pad, y: qEnd + 76, size: 32 };
+        tb = textBlock(ctx, tile, pad, qEnd + 100, L.cred.y - 36, tw, { max: 90, min: 54, gap: 26, quoteGap: 56 }, { max: 40, min: 28 });
+      } else {
+        L.portrait = { cx: W - pad - 80, cy: 138, d: 160 };
+        L.built = { x: W - pad, y: 262, size: 26, align: 'right' };
+        L.phone = { cx: W / 2, cy: 520, size: 220 };
+        L.kicker = { x: pad, y: 836, size: 34 };
+        tb = textBlock(ctx, tile, pad, 862, L.cred.y - 36, tw, { max: 98, min: 56, gap: 28, quoteGap: 60 }, { max: 42, min: 30 });
+      }
     } else if (fmt === FORMATS.square) {
       var p = 72, w2 = W - p * 2;
-      L.pad = p; L.brand = { x: p, y: 104, size: 44 };
-      L.phone = { cx: W - p - 120, cy: 190, size: 150 };
-      L.kicker = { x: p, y: 330, size: 28 };
-      L.head = fit(ctx, tile.head, w2, 330, 84, 50, 800, 1.1); L.head.x = p; L.head.y = 372;
-      var ys = L.head.y + L.head.h + 20;
-      if (tile.quoteBy) { L.quote = { x: p, y: ys + 24, size: 28 }; ys += 52; }
-      L.sub = fit(ctx, tile.sub, w2, 900 - ys - 40, 36, 26, 500, 1.35); L.sub.x = p; L.sub.y = ys + 6;
-      L.cta = { x: p, y: 912, w: 640, h: 100, size: 36 };
-      L.url = { x: W - p, y: 976, size: 34, align: 'right' };
+      L.pad = p; L.brand = { x: p, y: 100, size: 44 };
+      L.portrait = { cx: W - p - 78, cy: 142, d: 156 };
+      L.built = { x: W - p, y: 262, size: 22, align: 'right' };
+      L.kicker = { x: p, y: 306, size: 26 };
+      L.cred = { y: 744, h: 96, size: 24, w: w2 };
+      L.ask = { x: p, y: 902, size: 30, align: 'left' };
+      L.cta = { x: p, y: 926, w: 620, h: 94, size: 34 };
+      L.url = { x: W - p, y: 986, size: 32, align: 'right' };
+      tb = textBlock(ctx, tile, p, 326, 724, w2, { max: 82, min: 46, gap: 22, quoteGap: 44 }, { max: 34, min: 24 });
     } else {
-      var q = 60, w3 = 690;
-      L.pad = q; L.brand = { x: q, y: 78, size: 34 };
-      L.phone = { cx: 1000, cy: 260, size: 150 };
-      L.kicker = { x: q, y: 150, size: 22 };
-      L.head = fit(ctx, tile.head, w3, 190, 62, 38, 800, 1.1); L.head.x = q; L.head.y = 178;
-      var yl = L.head.y + L.head.h + 14;
-      if (tile.quoteBy) { L.quote = { x: q, y: yl + 18, size: 22 }; yl += 36; }
-      L.sub = fit(ctx, tile.sub, w3, 486 - yl, 27, 21, 500, 1.35); L.sub.x = q; L.sub.y = yl + 4;
-      L.cta = { x: q, y: 510, w: 560, h: 76, size: 30 };
-      L.url = { x: 1000, y: 558, size: 28, align: 'center' };
+      var q = 56, w3 = 700;
+      L.pad = q; L.brand = { x: q, y: 70, size: 32 };
+      L.portrait = { cx: 1012, cy: 214, d: 210 };
+      L.built = { x: 1012, y: 372, size: 23, align: 'center' };
+      L.kicker = { x: q, y: 134, size: 20 };
+      L.ask = { x: q, y: 486, size: 25, align: 'left' };
+      L.cta = { x: q, y: 504, w: 540, h: 74, size: 29 };
+      L.url = { x: 1012, y: 552, size: 27, align: 'center' };
+      tb = textBlock(ctx, tile, q, 152, 446, w3, { max: 58, min: 36, gap: 14, quoteGap: 32 }, { max: 25, min: 19 });
     }
+    L.head = tb.head; L.sub = tb.sub; L.quoteBy = tb.quote;
     return L;
   }
 
-  function chatLayout(ctx, chat, x, y, w, size) {
-    var out = { items: [], size: size }, cy = y;
-    chat.forEach(function (m) {
-      var isAI = m[0] === 'AI';
-      ctx.font = font(size, 500);
-      var maxW = w * 0.78 - 56;
-      var lines = wrap(ctx, m[1], maxW);
-      var widest = 0;
-      lines.forEach(function (l) { widest = Math.max(widest, ctx.measureText(l).width); });
-      var bw = Math.max(widest, ctx.measureText(isAI ? 'AI assistant' : 'Caller').width) + 56;
-      var bh = 28 + 30 + lines.length * size * 1.3 + 22;
-      out.items.push({ ai: isAI, who: isAI ? 'AI assistant' : 'Caller', lines: lines, x: isAI ? x + w - bw : x, y: cy, w: bw, h: bh });
-      cy += bh + 18;
-    });
-    out.labelY = cy + 22;
-    out.bottom = cy + 30;
-    return out;
+  /* ---------- drawing ---------- */
+  function drawBg(ctx, L, fmtKey) {
+    var W = L.W, H = L.H;
+    var g = ctx.createLinearGradient(0, 0, 0, H);
+    g.addColorStop(0, C.navy2); g.addColorStop(1, C.navy);
+    ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+    // warm glow behind the portrait
+    var P = L.portrait, rg = ctx.createRadialGradient(P.cx, P.cy, P.d * 0.2, P.cx, P.cy, P.d * 1.6);
+    rg.addColorStop(0, 'rgba(233,180,76,0.22)'); rg.addColorStop(1, 'rgba(233,180,76,0)');
+    ctx.fillStyle = rg; ctx.fillRect(0, 0, W, H);
+    ctx.fillStyle = C.gold; ctx.fillRect(0, 0, W, fmtKey === 'link' ? 8 : 12);
   }
 
-  /* ---------- drawing ---------- */
   function drawBrand(ctx, B, a) {
-    ctx.globalAlpha = a;
-    ctx.fillStyle = C.ink; ctx.font = font(B.size, 800); ctx.textAlign = 'left'; ctx.textBaseline = 'alphabetic';
+    ctx.globalAlpha = a; ctx.textAlign = 'left'; ctx.textBaseline = 'alphabetic';
+    ctx.fillStyle = C.white; ctx.font = font(B.size, 800);
     ctx.fillText('HireAIVoice', B.x, B.y);
     var w = ctx.measureText('HireAIVoice').width;
-    ctx.fillStyle = C.green; ctx.beginPath(); ctx.arc(B.x + w + B.size * 0.28, B.y - B.size * 0.12, B.size * 0.12, 0, Math.PI * 2); ctx.fill();
-    ctx.fillStyle = C.muted; ctx.font = font(B.size * 0.3, 600);
-    if (ctx.letterSpacing !== undefined) ctx.letterSpacing = Math.round(B.size * 0.03) + 'px';
-    ctx.fillText('BY HONORELEVATE', B.x, B.y + B.size * 0.55);
-    if (ctx.letterSpacing !== undefined) ctx.letterSpacing = '0px';
+    ctx.fillStyle = C.gold; ctx.beginPath(); ctx.arc(B.x + w + B.size * 0.28, B.y - B.size * 0.12, B.size * 0.12, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = C.label; ctx.font = font(B.size * 0.3, 650); spacing(ctx, Math.round(B.size * 0.04));
+    ctx.fillText('BY HONORELEVATE', B.x, B.y + B.size * 0.56); spacing(ctx, 0);
     ctx.globalAlpha = 1;
   }
 
-  // Hand-built handset with a ringing pulse, then the AI picks up.
+  // Connor's real photo, unaltered, cropped to a circle with a gold ring.
+  // A small phone badge on the ring rings, then flips to "AI" when answered.
+  function drawPortrait(ctx, L, tile, t, withBadge) {
+    var P = L.portrait, r = P.d / 2, a = prog(t, 0.1, 0.6), sc = 0.92 + 0.08 * a;
+    ctx.save(); ctx.globalAlpha = a;
+    ctx.translate(P.cx, P.cy); ctx.scale(sc, sc);
+    ctx.fillStyle = C.band; ctx.beginPath(); ctx.arc(0, 0, r, 0, Math.PI * 2); ctx.fill();
+    if (portrait) {
+      ctx.save(); ctx.beginPath(); ctx.arc(0, 0, r, 0, Math.PI * 2); ctx.clip();
+      ctx.drawImage(portrait, -r, -r, P.d, P.d); ctx.restore();
+    }
+    ctx.strokeStyle = C.gold; ctx.lineWidth = Math.max(4, P.d * 0.035);
+    ctx.beginPath(); ctx.arc(0, 0, r, 0, Math.PI * 2); ctx.stroke();
+    ctx.globalAlpha = a * 0.45; ctx.lineWidth = Math.max(1.5, P.d * 0.008);
+    ctx.beginPath(); ctx.arc(0, 0, r + P.d * 0.055, 0, Math.PI * 2); ctx.stroke();
+    ctx.restore();
+
+    if (withBadge) {
+      var answered = t >= ANSWER_AT, br = Math.max(24, P.d * 0.17);
+      var bx = P.cx + r * 0.72, by = P.cy + r * 0.72;
+      ctx.save(); ctx.globalAlpha = a;
+      if (!answered) {
+        for (var k = 0; k < 2; k++) {
+          var ph = ((t + k * 0.6) % 1.2) / 1.2;
+          ctx.strokeStyle = C.gold; ctx.globalAlpha = a * (1 - ph) * 0.8; ctx.lineWidth = Math.max(2, br * 0.12);
+          ctx.beginPath(); ctx.arc(bx, by, br * (1 + ph * 0.9), 0, Math.PI * 2); ctx.stroke();
+        }
+        ctx.globalAlpha = a;
+      }
+      ctx.translate(bx, by);
+      if (!answered && (t % 0.8) < 0.5) ctx.rotate(Math.sin(t * 60) * 0.12);
+      ctx.fillStyle = answered ? C.live : C.white;
+      ctx.strokeStyle = C.navy; ctx.lineWidth = Math.max(3, br * 0.14);
+      ctx.beginPath(); ctx.arc(0, 0, br, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+      ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+      if (answered) { ctx.fillStyle = C.navy; ctx.font = font(br * 0.85, 800); ctx.fillText('AI', 0, br * 0.05); }
+      else { ctx.font = br * 1.0 + 'px ' + EMOJI; ctx.fillText('📞', 0, br * 0.06); }
+      ctx.restore();
+    }
+
+    var B = L.built, bp = prog(t, 0.35, 0.5);
+    ctx.globalAlpha = bp; ctx.fillStyle = C.white; ctx.font = font(B.size, 750);
+    ctx.textAlign = B.align; ctx.textBaseline = 'alphabetic';
+    ctx.fillText(BUILT, B.x, B.y);
+    ctx.globalAlpha = 1;
+  }
+
+  // Story layout only: the big handset that rings, then the AI picks up.
   function drawPhone(ctx, P, tile, t) {
-    var s = P.size, cx = P.cx, cy = P.cy;
-    var answered = t >= ANSWER_AT;
-    var pa = prog(t, 0, 0.5);
-    ctx.save();
-    ctx.globalAlpha = pa;
-
-    // halo
-    ctx.fillStyle = answered ? C.greenTint : '#efe8d6';
-    ctx.beginPath(); ctx.arc(cx, cy, s * 0.95, 0, Math.PI * 2); ctx.fill();
-
-    // ringing pulse rings
+    var s = P.size, cx = P.cx, cy = P.cy, answered = t >= ANSWER_AT, pa = prog(t, 0, 0.5);
+    ctx.save(); ctx.globalAlpha = pa;
+    ctx.fillStyle = C.band; ctx.beginPath(); ctx.arc(cx, cy, s * 0.95, 0, Math.PI * 2); ctx.fill();
     if (!answered) {
       for (var k = 0; k < 3; k++) {
         var ph = ((t + k * 0.4) % 1.2) / 1.2;
-        ctx.strokeStyle = C.amber; ctx.globalAlpha = pa * (1 - ph) * 0.7; ctx.lineWidth = s * 0.03;
+        ctx.strokeStyle = C.gold; ctx.globalAlpha = pa * (1 - ph) * 0.75; ctx.lineWidth = s * 0.03;
         ctx.beginPath(); ctx.arc(cx, cy, s * (0.6 + ph * 0.55), 0, Math.PI * 2); ctx.stroke();
       }
     } else {
       var ap = prog(t, ANSWER_AT, 0.6);
-      ctx.strokeStyle = C.green; ctx.globalAlpha = pa * (1 - ap) * 0.8; ctx.lineWidth = s * 0.035;
+      ctx.strokeStyle = C.live; ctx.globalAlpha = pa * (1 - ap) * 0.8; ctx.lineWidth = s * 0.035;
       ctx.beginPath(); ctx.arc(cx, cy, s * (0.6 + ap * 0.6), 0, Math.PI * 2); ctx.stroke();
-      ctx.globalAlpha = pa * 0.9; ctx.lineWidth = s * 0.02;
+      ctx.strokeStyle = C.gold; ctx.globalAlpha = pa * 0.9; ctx.lineWidth = s * 0.018;
       ctx.beginPath(); ctx.arc(cx, cy, s * 0.82, 0, Math.PI * 2); ctx.stroke();
     }
     ctx.globalAlpha = pa;
-
-    // handset body, buzzing while it rings
     ctx.translate(cx, cy);
-    if (!answered) {
-      var burst = (t % 0.8) < 0.5 ? 1 : 0;
-      ctx.rotate(burst * Math.sin(t * 60) * 0.07);
-    }
+    if (!answered && (t % 0.8) < 0.5) ctx.rotate(Math.sin(t * 60) * 0.07);
     var bw = s * 0.62, bh = s * 1.1;
-    ctx.fillStyle = C.ink; rr(ctx, -bw / 2, -bh / 2, bw, bh, s * 0.1); ctx.fill();
-    ctx.fillStyle = answered ? C.green : '#fbfaf5';
+    ctx.fillStyle = '#050D18'; rr(ctx, -bw / 2, -bh / 2, bw, bh, s * 0.1); ctx.fill();
+    ctx.strokeStyle = 'rgba(233,180,76,0.6)'; ctx.lineWidth = s * 0.012; ctx.stroke();
+    ctx.fillStyle = answered ? C.live : '#F4F6FA';
     rr(ctx, -bw / 2 + s * 0.04, -bh / 2 + s * 0.1, bw - s * 0.08, bh - s * 0.2, s * 0.05); ctx.fill();
-    ctx.fillStyle = '#38524a'; rr(ctx, -s * 0.08, -bh / 2 + s * 0.04, s * 0.16, s * 0.03, s * 0.015); ctx.fill();
-
     ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
     if (answered) {
-      ctx.fillStyle = C.white; ctx.font = font(s * 0.26, 800); ctx.fillText('AI', 0, -s * 0.12);
-      ctx.font = font(s * 0.075, 700); ctx.fillText('ON THE CALL', 0, s * 0.06);
-      // talking bars
+      ctx.fillStyle = C.navy; ctx.font = font(s * 0.26, 800); ctx.fillText('AI', 0, -s * 0.12);
+      ctx.font = font(s * 0.075, 750); ctx.fillText('ON THE CALL', 0, s * 0.06);
       for (var i = 0; i < 5; i++) {
         var hh = s * (0.04 + 0.06 * Math.abs(Math.sin(t * 7 + i * 1.3)));
         ctx.fillRect(-s * 0.15 + i * s * 0.07 - s * 0.018, s * 0.2 - hh / 2, s * 0.036, hh);
       }
     } else {
-      ctx.fillStyle = C.ink; ctx.font = font(s * 0.085, 700); ctx.fillText('INCOMING', 0, -s * 0.2);
-      ctx.fillStyle = C.amber; ctx.font = font(s * 0.075, 700); ctx.fillText('ringing…', 0, -s * 0.08);
+      ctx.fillStyle = C.navy; ctx.font = font(s * 0.085, 750); ctx.fillText('INCOMING', 0, -s * 0.2);
+      ctx.fillStyle = '#8A5A00'; ctx.font = font(s * 0.075, 700); ctx.fillText('ringing…', 0, -s * 0.08);
       ctx.font = s * 0.22 + 'px ' + EMOJI; ctx.fillText(tile.emoji, 0, s * 0.16);
     }
     ctx.restore();
 
-    // vertical badge (emoji coin) bottom-right of the handset once answered
-    if (answered) {
-      var bp = prog(t, ANSWER_AT + 0.1, 0.4);
-      ctx.save(); ctx.globalAlpha = bp;
-      var bx = cx + s * 0.42, by = cy + s * 0.42, br = s * 0.2 * (0.6 + 0.4 * bp);
-      ctx.fillStyle = C.white; ctx.strokeStyle = C.line; ctx.lineWidth = s * 0.012;
-      ctx.beginPath(); ctx.arc(bx, by, br, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
-      ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-      ctx.font = br * 1.1 + 'px ' + EMOJI; ctx.fillText(tile.emoji, bx, by + br * 0.05);
-      ctx.restore();
-    }
-
-    // status pill under the phone
-    var pillY = cy + s * 0.95 + s * 0.04;
-    var label = answered ? 'ANSWERED BY AI' : 'MISSED CALL?';
-    ctx.save();
-    ctx.globalAlpha = pa;
+    var pillY = cy + s * 0.99, label = answered ? 'ANSWERED BY AI' : 'MISSED CALL?';
+    ctx.save(); ctx.globalAlpha = pa;
     ctx.font = font(s * 0.1, 800);
-    var pw = ctx.measureText(label).width + s * 0.16, ph2 = s * 0.18;
-    ctx.fillStyle = answered ? C.green : C.white;
-    ctx.strokeStyle = answered ? C.green : C.amber; ctx.lineWidth = s * 0.012;
+    var pw = ctx.measureText(label).width + s * 0.18, ph2 = s * 0.19;
+    ctx.fillStyle = answered ? C.live : C.navy; ctx.strokeStyle = answered ? C.live : C.gold; ctx.lineWidth = s * 0.012;
     rr(ctx, cx - pw / 2, pillY - ph2 / 2, pw, ph2, ph2 / 2); ctx.fill(); ctx.stroke();
-    ctx.fillStyle = answered ? C.white : C.amber; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    ctx.fillStyle = answered ? C.navy : C.gold; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
     ctx.fillText(label, cx, pillY + s * 0.005);
     ctx.restore();
   }
 
   function drawLines(ctx, blk, color, t, start, step) {
-    ctx.fillStyle = color; ctx.font = font(blk.size, blk.weight); ctx.textAlign = 'left'; ctx.textBaseline = 'alphabetic';
+    ctx.fillStyle = color; ctx.font = font(blk.size, blk.weight, blk.italic);
+    ctx.textAlign = blk.align || 'left'; ctx.textBaseline = 'alphabetic';
     blk.lines.forEach(function (line, i) {
       var p = prog(t, start + i * step, 0.5);
       ctx.globalAlpha = p;
@@ -325,45 +375,41 @@
     ctx.globalAlpha = 1;
   }
 
-  function drawChat(ctx, ch, t, start) {
-    ch.items.forEach(function (m, i) {
-      var p = prog(t, start + i * 0.7, 0.45);
-      if (p <= 0) return;
-      ctx.save(); ctx.globalAlpha = p;
-      ctx.translate(0, (1 - p) * 20);
-      ctx.fillStyle = m.ai ? C.greenSoft : C.white;
-      ctx.strokeStyle = m.ai ? C.green : C.line; ctx.lineWidth = 2;
-      rr(ctx, m.x, m.y, m.w, m.h, 22); ctx.fill(); ctx.stroke();
-      ctx.fillStyle = m.ai ? C.green : C.muted; ctx.font = font(ch.size * 0.72, 800); ctx.textAlign = 'left'; ctx.textBaseline = 'alphabetic';
-      ctx.fillText(m.who.toUpperCase(), m.x + 28, m.y + 28 + ch.size * 0.6);
-      ctx.fillStyle = C.ink; ctx.font = font(ch.size, 500);
-      m.lines.forEach(function (l, j) { ctx.fillText(l, m.x + 28, m.y + 28 + 30 + ch.size * 0.95 + j * ch.size * 1.3); });
-      ctx.restore();
-    });
-    var lp = prog(t, start + ch.items.length * 0.7, 0.4);
-    ctx.globalAlpha = lp; ctx.fillStyle = C.muted; ctx.font = font(22, 600); ctx.textAlign = 'left';
-    ctx.fillText('Illustrative call. Not a customer result.', 90, ch.labelY);
-    ctx.globalAlpha = 1;
+  function drawCred(ctx, L, t, start) {
+    var c = L.cred, p = prog(t, start, 0.5);
+    ctx.save(); ctx.globalAlpha = p;
+    ctx.fillStyle = C.band; ctx.fillRect(0, c.y, L.W, c.h);
+    ctx.fillStyle = C.gold; ctx.fillRect(0, c.y, L.W, 3);
+    var lines = credLines(ctx, c.size, c.w), lh = c.size * 1.4;
+    var y0 = c.y + c.h / 2 - (lines.length * lh) / 2 + c.size * 0.95;
+    ctx.fillStyle = C.soft; ctx.textAlign = 'center'; ctx.textBaseline = 'alphabetic'; ctx.font = font(c.size, 650);
+    lines.forEach(function (l, i) { ctx.fillText(l, L.W / 2, y0 + i * lh); });
+    ctx.restore();
   }
 
-  function drawCta(ctx, L, t, start) {
-    var p = prog(t, start, 0.5), c = L.cta;
+  function drawAsk(ctx, L, t, start) {
+    var A = L.ask, ap = prog(t, start, 0.45);
+    ctx.globalAlpha = ap; ctx.fillStyle = C.white; ctx.font = font(A.size, 800);
+    ctx.textAlign = A.align; ctx.textBaseline = 'alphabetic';
+    ctx.fillText(ASK, A.x, A.y - 14 * (L.W / 1080) + (1 - ap) * 10);
+    ctx.globalAlpha = 1;
+
+    var c = L.cta, p = prog(t, start + 0.3, 0.5);
     ctx.save(); ctx.globalAlpha = p;
     var grow = 0.94 + 0.06 * p;
     ctx.translate(c.x + c.w / 2, c.y + c.h / 2); ctx.scale(grow, grow); ctx.translate(-(c.x + c.w / 2), -(c.y + c.h / 2));
-    ctx.fillStyle = C.green; rr(ctx, c.x, c.y, c.w, c.h, 12); ctx.fill();
-    ctx.fillStyle = C.white; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    ctx.fillStyle = C.orange; rr(ctx, c.x, c.y, c.w, c.h, 12); ctx.fill();
     var fs = c.size; ctx.font = font(fs, 800);
-    while (ctx.measureText('📞 ' + CTA).width > c.w - 40 && fs > 18) { fs -= 1; ctx.font = font(fs, 800); }
-    var label = CTA, iconW = fs * 1.3;
-    var tw = ctx.measureText(label).width;
-    var x0 = c.x + c.w / 2 - (tw + iconW) / 2;
-    ctx.font = fs * 0.9 + 'px ' + EMOJI; ctx.textAlign = 'left'; ctx.fillText('📞', x0, c.y + c.h / 2 + fs * 0.04);
-    ctx.font = font(fs, 800); ctx.fillText(label, x0 + iconW, c.y + c.h / 2 + fs * 0.04);
+    while (ctx.measureText('📞 ' + CTA).width > c.w - 40 && fs > 16) { fs -= 1; ctx.font = font(fs, 800); }
+    var iconW = fs * 1.3, tw = ctx.measureText(CTA).width, x0 = c.x + c.w / 2 - (tw + iconW) / 2;
+    ctx.fillStyle = C.navy; ctx.textBaseline = 'middle'; ctx.textAlign = 'left';
+    ctx.font = fs * 0.9 + 'px ' + EMOJI; ctx.fillText('📞', x0, c.y + c.h / 2 + fs * 0.04);
+    ctx.font = font(fs, 800); ctx.fillText(CTA, x0 + iconW, c.y + c.h / 2 + fs * 0.04);
     ctx.restore();
 
-    var up = prog(t, start + 0.3, 0.5), u = L.url;
-    ctx.globalAlpha = up; ctx.fillStyle = C.ink; ctx.font = font(u.size, 800); ctx.textAlign = u.align; ctx.textBaseline = 'alphabetic';
+    var u = L.url, up = prog(t, start + 0.6, 0.5);
+    ctx.globalAlpha = up; ctx.fillStyle = C.gold; ctx.font = font(u.size, 800);
+    ctx.textAlign = u.align; ctx.textBaseline = 'alphabetic';
     ctx.fillText(URL_SHOW, u.x, u.y);
     ctx.globalAlpha = 1;
   }
@@ -372,38 +418,36 @@
   function draw(ctx, tile, fmtKey, t, L) {
     var fmt = FORMATS[fmtKey];
     L = L || layout(ctx, tile, fmt);
-    var W = fmt.w, H = fmt.h;
     ctx.save();
-    ctx.fillStyle = C.bg; ctx.fillRect(0, 0, W, H);
-    // quiet structure: green top rule and a white text panel edge
-    ctx.fillStyle = C.green; ctx.fillRect(0, 0, W, fmtKey === 'link' ? 10 : 14);
-    ctx.fillStyle = C.line; ctx.fillRect(0, H - 4, W, 4);
-
+    drawBg(ctx, L, fmtKey);
     drawBrand(ctx, L.brand, prog(t, 0, 0.5));
-    drawPhone(ctx, L.phone, tile, t);
+    if (L.phone) drawPhone(ctx, L.phone, tile, t);
+    drawPortrait(ctx, L, tile, t, !L.phone);
 
-    var kp = prog(t, 0.3, 0.4);
-    ctx.globalAlpha = kp; ctx.fillStyle = C.green; ctx.font = font(L.kicker.size, 800); ctx.textAlign = 'left'; ctx.textBaseline = 'alphabetic';
-    if (ctx.letterSpacing !== undefined) ctx.letterSpacing = Math.round(L.kicker.size * 0.12) + 'px';
-    ctx.fillText(tile.kicker.toUpperCase(), L.kicker.x, L.kicker.y);
-    if (ctx.letterSpacing !== undefined) ctx.letterSpacing = '0px';
+    var hs = 0.55;
+    if (L.quote) { drawLines(ctx, L.quote, C.gold, t, 0.5, 0.22); hs = 0.6 + L.quote.lines.length * 0.22; }
+
+    var kp = prog(t, hs - 0.25, 0.4);
+    ctx.globalAlpha = kp; ctx.fillStyle = C.gold; ctx.font = font(L.kicker.size, 800);
+    ctx.textAlign = 'left'; ctx.textBaseline = 'alphabetic'; spacing(ctx, Math.round(L.kicker.size * 0.12));
+    ctx.fillText(tile.kicker.toUpperCase(), L.kicker.x, L.kicker.y); spacing(ctx, 0);
     ctx.globalAlpha = 1;
 
-    drawLines(ctx, L.head, C.ink, t, 0.55, 0.28);
-    var afterHead = 0.55 + L.head.lines.length * 0.28;
-    if (L.quote) {
+    drawLines(ctx, L.head, C.white, t, hs, 0.26);
+    var afterHead = hs + L.head.lines.length * 0.26;
+    if (L.quoteBy) {
       var qp = prog(t, afterHead, 0.4);
-      ctx.globalAlpha = qp; ctx.fillStyle = C.muted; ctx.font = 'italic ' + font(L.quote.size, 600); ctx.textAlign = 'left';
-      ctx.fillText(tile.quoteBy, L.quote.x, L.quote.y);
+      ctx.globalAlpha = qp; ctx.fillStyle = C.gold; ctx.font = font(L.quoteBy.size, 600, true); ctx.textAlign = 'left';
+      ctx.fillText(tile.quoteBy, L.quoteBy.x, L.quoteBy.y);
       ctx.globalAlpha = 1;
     }
     var subStart = Math.max(afterHead + 0.1, ANSWER_AT);
-    drawLines(ctx, L.sub, C.muted, t, subStart, 0.12);
-    if (L.chat) drawChat(ctx, L.chat, t, subStart + 0.5);
-    drawCta(ctx, L, t, fmtKey === 'story' ? 4.3 : 3.6);
+    drawLines(ctx, L.sub, C.body, t, subStart, 0.12);
+    if (L.cred) drawCred(ctx, L, t, 3.2);
+    drawAsk(ctx, L, t, fmtKey === 'link' ? 3.4 : 3.7);
     ctx.restore();
     return L;
   }
 
-  window.HAVTiles = { TILES: TILES, FORMATS: FORMATS, SECONDS: SECONDS, FPS: FPS, draw: draw, layout: layout };
+  window.HAVTiles = { TILES: TILES, FORMATS: FORMATS, SECONDS: SECONDS, FPS: FPS, draw: draw, layout: layout, ready: ready, PALETTE: C };
 })();

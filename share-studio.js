@@ -43,6 +43,7 @@
   function fileBase(tile, fmtKey) { var f = T.FORMATS[fmtKey]; return 'hireaivoice-' + tile.id + '-' + fmtKey + '-' + f.w + 'x' + f.h; }
 
   async function exportPng(tile, fmtKey) {
+    await T.ready;
     var c = fullCanvas(fmtKey), ctx = c.getContext('2d');
     T.draw(ctx, tile, fmtKey, T.SECONDS);
     var blob = await new Promise(function (res) { c.toBlob(res, 'image/png'); });
@@ -62,6 +63,7 @@
   function yieldNow() { return new Promise(function (r) { setTimeout(r, 0); }); }
 
   async function exportMp4(tile, fmtKey, onProgress) {
+    await T.ready;
     if (!canVideo()) throw new Error('This browser cannot make MP4 files. Try Chrome or Edge on a computer.');
     var f = T.FORMATS[fmtKey], W = f.w, H = f.h, fps = T.FPS, total = T.SECONDS * fps;
     var bitrate = Math.min(16000000, Math.max(6000000, Math.round(W * H * 0.9)));
@@ -212,7 +214,7 @@
       setTimeout(function () { b.textContent = 'Copy caption'; }, 1800);
     });
 
-    renderPreview(card, tile);
+    T.ready.then(function () { renderPreview(card, tile); });
   });
 
   if (!canVideo()) {

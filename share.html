@@ -1,0 +1,42 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Share Studio | HireAIVoice</title><meta name="robots" content="noindex,nofollow"><meta name="description" content="Download HireAIVoice tiles and captions for social posts."><link rel="icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/favicon-180.png"><link rel="stylesheet" href="/review.css">
+<style>
+.st-hero{padding:48px 0 30px;background:var(--cream)}
+.st-hero h1{font-size:clamp(36px,4.4vw,56px)}
+.st-bar{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:8px}
+.st-bar span{font-size:14px;font-weight:700;color:var(--muted);margin-right:4px}
+.st-bar button,.st-fmts button{min-height:44px;padding:8px 14px;border:1px solid var(--line);background:white;color:var(--ink);border-radius:5px;font-weight:700;font-size:14px;cursor:pointer}
+.st-bar button[aria-pressed=true],.st-fmts button[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:white}
+.st-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:26px;padding:34px 0 60px}
+.st-card{border:1px solid var(--line);border-radius:8px;padding:18px;background:white;display:flex;flex-direction:column;min-width:0}
+.st-head{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.st-num{font-size:13px;font-weight:800;color:var(--green)}
+.st-kicker{font-size:12px;letter-spacing:.13em;font-weight:800;text-transform:uppercase;color:var(--ink)}
+.st-fmts{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.st-fmts button{flex:1;min-width:0;padding:8px 6px}
+.st-stage{position:relative;background:var(--cream);border:1px solid var(--line);border-radius:6px;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:10px}
+.st-stage canvas{display:block;max-width:100%;height:auto;box-shadow:0 1px 3px rgba(18,41,33,.12)}
+.st-stage[data-fmt=story] canvas{max-height:520px;width:auto}
+.st-play{position:absolute;right:10px;bottom:10px;min-height:44px;padding:8px 14px;border:1px solid var(--ink);background:rgba(255,255,255,.94);color:var(--ink);border-radius:5px;font-weight:750;font-size:13px;cursor:pointer}
+.st-size{margin:10px 0 12px}
+.st-actions{display:flex;gap:10px;flex-wrap:wrap}
+.ms-mp4,.ms-dl,.ms-copy{min-height:48px;padding:11px 16px;border-radius:5px;font-weight:750;font-size:15px;cursor:pointer;font-family:inherit}
+.ms-mp4{background:var(--green);color:white;border:1px solid var(--green);flex:1}
+.ms-dl{background:white;color:var(--green);border:1px solid var(--green);flex:1}
+.ms-copy{background:white;color:var(--ink);border:1px solid #9caea1;margin-top:10px;align-self:flex-start}
+.ms-mp4:disabled,.ms-dl:disabled{opacity:.55;cursor:default}
+.st-status{min-height:22px;font-size:14px;color:var(--muted);margin:10px 0 6px}
+.st-status.ok{color:var(--green);font-weight:700}
+.st-status.err{color:#9b2c1f;font-weight:700}
+.st-cap-label{font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.st-cap{width:100%;border:1px solid #9caea1;border-radius:4px;padding:10px;font:15px/1.5 system-ui,-apple-system,Segoe UI,sans-serif;color:var(--ink);background:#fbfcfa;resize:vertical}
+.st-rules{font-size:14px;color:var(--muted)}
+@media(max-width:800px){.st-hero{padding:32px 0 20px}.st-grid{grid-template-columns:1fr;gap:20px;padding:22px 0 40px}.st-stage[data-fmt=story] canvas{max-height:460px}}
+</style></head><body><a class="skip" href="#main">Skip to content</a><header><nav class="wrap nav" aria-label="Main"><a class="brand" href="/">HireAIVoice<small>BY HONORELEVATE</small></a></nav></header><main id="main">
+<section class="st-hero"><div class="wrap"><p class="eyebrow">Share Studio</p><h1>Tiles for the missed call.</h1><p class="lead">Pick a tile and a size. Download the PNG or the animated MP4, copy the caption, and post. Every tile points to the demo line: (661) 219-7299.</p>
+<div class="st-bar" role="group" aria-label="Show every tile as"><span>Show all as</span><button type="button" data-all-fmt="story" aria-pressed="true">9:16 Reels, Stories</button><button type="button" data-all-fmt="square" aria-pressed="false">1:1 Feed</button><button type="button" data-all-fmt="link" aria-pressed="false">1200x628 Link</button></div>
+<p class="small" id="mp4-note" hidden>MP4 export needs a browser with video encoding, such as Chrome or Edge on a computer. PNG and captions work everywhere.</p>
+<p class="st-rules">The MP4 is 6 seconds, silent, 30 frames per second. Chat bubbles show an illustrative call, not a customer result.</p></div></section>
+<section><div class="wrap"><div class="st-grid" id="tiles"></div></div></section>
+</main><footer><div class="wrap footgrid"><div><strong>HireAIVoice by HonorElevate</strong><br>Connor MacIvor · Santa Clarita, California</div><div>AI voice demo: <a href="tel:+16612197299">(661) 219-7299</a><br><a href="/">hireaivoice.com</a></div></div></footer>
+<script src="/vendor/mp4-muxer-5.2.2.js"></script><script src="/share-tiles.js"></script><script src="/share-studio.js"></script>
+</body></html>

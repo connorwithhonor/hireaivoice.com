@@ -1,25 +1,78 @@
-# HireAIVoice by HonorElevate
+# HireAIVoice
 
-HireAIVoice is Connor MacIvor's entry service for AI phone support. HonorElevate is the platform and managed-service expansion path. Based in Santa Clarita; serves suitable businesses in Los Angeles County and elsewhere.
+> HireAIVoice is the AI voice service offered under HonorElevate. It handles after-hours and overflow calls, captures requests and callback details, and helps a business assign the next step. It is for local service businesses with recurring phone inquiries, a defined service area, and someone responsible for follow-up, including businesses in Santa Clarita and Los Angeles County. The AI receptionist follows approved hours, services, and routing rules. Confirmed booking requires a connected calendar that has passed testing. To try it, [Call Betty, our AI receptionist: (661) 219-7299](tel:+16612197299), then [Book a 20-minute call with Connor](https://bookwithhonor.com/?utm_source=hireaivoice&utm_medium=site&utm_campaign=llms).
 
-## Contact
-AI voice demo: (661) 219-7299. Connor's AI business line: (661) 476-2217.
+## Core pages
 
-## Scope
-Start with agreed after-hours or overflow coverage, approved business information, request capture, and a defined human handoff. Carrier forwarding must be verified. An appointment request is not a confirmed booking. Direct booking requires a supported connected calendar and acceptance testing. AI can make mistakes. This is not an emergency service or professional advice service.
+- [HireAIVoice by HonorElevate | AI Phone Support in Santa Clarita](https://hireaivoice.com/)
+- [Talk with Connor | Plan Your HireAIVoice Pilot](https://hireaivoice.com/start/)
+- [Call Opportunity Calculator | HireAIVoice](https://hireaivoice.com/calculator/)
+- [How call forwarding works, by carrier | HireAIVoice](https://hireaivoice.com/how-forwarding-works/)
+- [Grow with HonorElevate | Beyond AI Phone Answering](https://hireaivoice.com/beyond-the-phone/)
+- [How HireAIVoice Works | A Tested Call Flow](https://hireaivoice.com/system/)
+- [AI Phone Coverage for Nonprofits | HireAIVoice](https://hireaivoice.com/nonprofits/)
+- [Santa Clarita, Bakersfield, Lancaster and Palmdale AI Receptionist | HireAIVoice](https://hireaivoice.com/661/)
+- [Nevada AI Receptionist | 775-AIVOICE | HireAIVoice](https://hireaivoice.com/nevada/)
+- [Northern California AI Receptionist | 530-AIVOICE | HireAIVoice](https://hireaivoice.com/northern-california/)
 
-AI identification is a product standard. Audio recording, transcription, AI processing, summaries, consent, and retention require separate configuration and review. Disabling audio recording does not establish that no personal data is processed.
+## Industries
 
-## Commercial terms
-Published plans: Starter $397/month; Full System $597/month. Published trial: 30 days free. Neither plan has a setup fee. Custom expansion is scoped separately. Availability, actual scope, usage, overages, support, renewal, cancellation, and data handling must be confirmed in writing before activation. Existing accepted customer agreements govern existing service. Turning off forwarding does not itself cancel billing.
+- [Dental offices](https://hireaivoice.com/industries/dental/)
+- [HVAC companies](https://hireaivoice.com/industries/hvac/)
+- [Plumbing companies](https://hireaivoice.com/industries/plumbing/)
+- [Roofing companies](https://hireaivoice.com/industries/roofing/)
+- [Auto repair shops](https://hireaivoice.com/industries/auto-repair/)
+- [Med spas](https://hireaivoice.com/industries/med-spa/)
+- [Law firms](https://hireaivoice.com/industries/law-firms/)
+- [Property management](https://hireaivoice.com/industries/property-management/)
+- [Insurance agencies](https://hireaivoice.com/industries/insurance-agencies/)
+- [Home services contractors](https://hireaivoice.com/industries/home-services-contractors/)
 
-Platform access is different from implementation. Larger builds, migrations, campaigns, content production, and custom integrations need separate scope and pricing. No revenue result or unlimited labor is promised.
+## Answers
 
-## Pages
-- https://hireaivoice.com/
-- https://hireaivoice.com/system
-- https://hireaivoice.com/start
-- https://hireaivoice.com/calculator
-- https://hireaivoice.com/beyond-the-phone
-- https://hireaivoice.com/how-forwarding-works
-- https://hireaivoice.com/blog/
+- [Can the AI receptionist use my business name?](https://hireaivoice.com/answers/ai-receptionist-business-name/)
+- [Can the AI receptionist book on my calendar?](https://hireaivoice.com/answers/ai-receptionist-calendar-booking/)
+- [How should the AI receptionist handle emergency trade calls?](https://hireaivoice.com/answers/ai-receptionist-emergency-trade-calls/)
+- [Can a one-person business use an AI receptionist?](https://hireaivoice.com/answers/ai-receptionist-one-person-business/)
+- [Can the AI receptionist transfer calls to my cell phone?](https://hireaivoice.com/answers/ai-receptionist-transfer-to-cell-phone/)
+- [What happens if the AI receptionist gives a wrong answer?](https://hireaivoice.com/answers/ai-receptionist-wrong-answer/)
+- [How does call forwarding to AI work?](https://hireaivoice.com/answers/how-call-forwarding-to-ai-works/)
+- [How can I test the AI receptionist before launch?](https://hireaivoice.com/answers/test-ai-receptionist-before-launch/)
+- [What does an AI receptionist do?](https://hireaivoice.com/answers/what-does-an-ai-receptionist-do/)
+- [Will the AI receptionist sound robotic?](https://hireaivoice.com/answers/will-ai-receptionist-sound-robotic/)
+
+## Service pages
+
+- [AI receptionist](https://hireaivoice.com/ai-receptionist/)
+- [AI answering service](https://hireaivoice.com/ai-answering-service/)
+- [AI receptionist for small business](https://hireaivoice.com/ai-receptionist-small-business/)
+- [After-hours answering service](https://hireaivoice.com/after-hours-answering-service/)
+- [Missed-call text-back](https://hireaivoice.com/missed-call-text-back/)
+- [AI phone answering in Los Angeles](https://hireaivoice.com/ai-phone-answering-los-angeles/)
+
+## Blog
+
+- [Blog | Hire AI Voice](https://hireaivoice.com/blog/)
+- [Auto Repair Shops: Fixing the Front-Desk Bottleneck | Hire AI Voice](https://hireaivoice.com/blog/ai-answering-auto-repair-shops/)
+- [Cover After-Hours Plumbing Calls | Hire AI Voice](https://hireaivoice.com/blog/ai-answering-plumbers-after-hours/)
+- [AI Phone Answering for Dental Offices in Los Angeles County | Hire AI Voice](https://hireaivoice.com/blog/ai-phone-answering-dental-la-county/)
+- [The 24/7 AI Receptionist for Missed Calls | Hire AI Voice](https://hireaivoice.com/blog/ai-receptionist-24-7/)
+- [Med Spas: Covering Consultation Calls After Hours | Hire AI Voice](https://hireaivoice.com/blog/ai-receptionist-med-spa-booking/)
+- [How an AI Receptionist Gets Connected in a 15-Minute Call | Hire AI Voice](https://hireaivoice.com/blog/ai-receptionist-setup-one-day/)
+- [AI Voice Agents for HVAC Companies in Santa Clarita | Hire AI Voice](https://hireaivoice.com/blog/ai-voice-agent-hvac-santa-clarita/)
+- [AI Voice Agent Pricing | Hire AI Voice](https://hireaivoice.com/blog/ai-voice-agent-pricing/)
+- [Roofing Companies and the Storm-Surge Call Problem | Hire AI Voice](https://hireaivoice.com/blog/ai-voice-roofing-storm-calls/)
+- [AI Voice Systems for Santa Clarita Valley Businesses | Hire AI Voice](https://hireaivoice.com/blog/ai-voice-systems-santa-clarita-business/)
+- [AI Voice and Chatbots: Different Jobs for Service Businesses | Hire AI Voice](https://hireaivoice.com/blog/ai-voice-vs-chatbots/)
+- [AI Voice Agent vs Answering Service: What Is Actually Different | Hire AI Voice](https://hireaivoice.com/blog/ai-vs-answering-service/)
+- [How to Estimate the Cost of Missed Calls | Hire AI Voice](https://hireaivoice.com/blog/cost-of-a-missed-call/)
+- [How AI Voice Agents Work on a Missed Call | Hire AI Voice](https://hireaivoice.com/blog/how-ai-voice-agents-work/)
+- [Lead Response Time: Measure It and Cover the Gaps | Hire AI Voice](https://hireaivoice.com/blog/lead-response-time-data/)
+- [Missed-Call Text-Back for Small Business: Give Callers Another Path | Hire AI Voice](https://hireaivoice.com/blog/missed-call-text-back-booked-jobs/)
+- [Speed to Lead: Set a Five-Minute Response Target | Hire AI Voice](https://hireaivoice.com/blog/speed-to-lead-first-5-minutes/)
+- [Speed to Lead for Los Angeles County Service Companies | Hire AI Voice](https://hireaivoice.com/blog/speed-to-lead-los-angeles-county/)
+- [Why Santa Clarita Home-Service Businesses Are Switching to AI Phones | Hire AI Voice](https://hireaivoice.com/blog/why-scv-businesses-switch-ai-phones/)
+- [Will Customers Know It Is AI? Yes, In the First Breath | Hire AI Voice](https://hireaivoice.com/blog/will-customers-know-its-ai/)
+- [Missed Calls With No Voicemail and How to Find the Gap | Hire AI Voice](https://hireaivoice.com/blog/missed-calls-no-voicemail-audit/)
+- [After Hours Call Intake That Gives Customers a Clear Next Step | Hire AI Voice](https://hireaivoice.com/blog/after-hours-call-intake-checklist/)
+- [How to Keep Lead Notifications From Getting Lost | Hire AI Voice](https://hireaivoice.com/blog/lead-notification-human-handoff-checklist/)
